@@ -1,15 +1,14 @@
 {
-  "name": "electron-with-express",
-  "description": "Demonstrates spawning Express from Electron and using it to serve content",
-  "version": "0.15.0",
+  "name": "casa-corrently-electron-ui",
+  "description": "Casa Corrently using Electron as UI",
+  "version": "0.5.0",
   "main": "main.js",
   "authors": [
-    "Frank Hale <frankhale@gmail.com>"
+    "STROMDAO GmbH <kontakt@stromdao.com>"
   ],
-  "license": "GPL-3.0",
-  "private": true,
+  "license": "Apache-2",
   "scripts": {
-    "start": ".\\node_modules\\node\\bin\\node.exe start-electron.js"
+    "start": "node start-electron.js"
   },
   "dependencies": {
     "electron": "9.0.4",
