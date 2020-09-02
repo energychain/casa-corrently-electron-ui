@@ -8,15 +8,29 @@
   ],
   "license": "Apache-2",
   "scripts": {
-    "start": "node start-electron.js"
+    "start": "node start-electron.js",
+    "build-x64": "electron-packager ./ --arch=x64 --overwrite --out dist --win32metadata.CompanyName='STROMDAO GmbH'",
+    "build": "electron-packager ./ --all --overwrite --out dist",
+    "setup": "electron-installer-windows --src dist/casa-corrently-electron-ui-win32-x64/ --dest dist/installers/ --config win32_config.json"
+  },
+  "funding": {
+    "type": "corporation",
+    "url": "https://www.stromdao.de/crowdfunding/info"
+  },
+  "bugs": {
+    "url": "https://github.com/energychain/casa-corrently-electron-ui/issues"
   },
   "dependencies": {
-    "electron": "9.0.4",
+    "casa-corrently": "^0.9.0",
     "jquery": "^3.5.1",
     "keymaster": "^1.6.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.20",
     "node": "^14.4.0",
     "request": "^2.88.2",
     "strip": "^3.0.0"
+  },
+  "devDependencies": {
+    "electron": "^10.1.1",
+    "electron-installer-windows": "^3.0.0"
   }
 }
